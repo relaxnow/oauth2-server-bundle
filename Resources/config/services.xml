@@ -33,6 +33,10 @@
                 <argument type="service" id="oauth2.storage.user_claims" />
                 <argument type="service" id="oauth2.storage.public_key" />
             </argument>
+            <argument key="config" type="collection">
+                <argument type="string" key="use_openid_connect">true</argument>
+                <argument type="string" key="issuer">qixi</argument>
+            </argument>
         </service>
         <service id="oauth2.request" class="%oauth2.request.class%" factory-class="OAuth2\HttpFoundationBridge\Request" factory-method="createFromRequest" scope="request">
             <argument type="service" id="request"/>

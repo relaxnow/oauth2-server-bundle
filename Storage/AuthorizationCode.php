@@ -2,7 +2,7 @@
 
 namespace OAuth2\ServerBundle\Storage;
 
-use OAuth2\Storage\AuthorizationCodeInterface;
+use OAuth2\OpenID\Storage\AuthorizationCodeInterface;
 use Doctrine\ORM\EntityManager;
 use OAuth2\ServerBundle\Entity\Client;
 

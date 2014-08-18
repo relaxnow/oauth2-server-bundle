@@ -2,6 +2,7 @@
 
 namespace OAuth2\ServerBundle\Command;
 
+use OAuth2\ServerBundle\Manager\ClientManager;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -24,6 +25,7 @@ class CreateClientCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $container = $this->getContainer();
+        /** @var ClientManager $clientManager */
         $clientManager = $container->get('oauth2.client_manager');
 
         try {

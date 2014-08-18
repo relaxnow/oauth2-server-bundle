@@ -2,6 +2,7 @@
 
 namespace OAuth2\ServerBundle\Controller;
 
+use OAuth2\Server;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 // this imports the "@Route" annotation
@@ -19,6 +20,7 @@ class ResourceController extends Controller
     public function resource(Application $app)
     {
         // get the oauth server (configured in src/OAuth2Demo/Server/Server.php)
+        /** @var Server $server */
         $server = $app['oauth_server'];
 
         // get the oauth response (configured in src/OAuth2Demo/Server/Server.php)

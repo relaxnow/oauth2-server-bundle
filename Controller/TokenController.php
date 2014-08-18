@@ -2,6 +2,7 @@
 
 namespace OAuth2\ServerBundle\Controller;
 
+use OAuth2\Server;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
@@ -17,6 +18,7 @@ class TokenController extends Controller
      */
     public function tokenAction()
     {
+        /** @var Server $server */
         $server = $this->get('oauth2.server');
 
         // Add Grant Types
